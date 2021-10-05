@@ -1,5 +1,5 @@
 fun main() {
-  vars()
+  arrays()
 }
 
 /***
@@ -39,5 +39,45 @@ fun vars() {
   println("value of Boolean $thisIsBoolean")
 }
 
+/**
+ * Defining editiong and using arrays
+ */
+fun arrays() {
+  // Array declaration
+  // Arrays have fixed allocated memory
+  var arrayA = arrayOf(1,2,3,4,5,6,7,8,9)
+  var arrayB: Array<String> = emptyArray()
 
+  // Array list declaration
+  // Array list have dynamic memory allocation
+  val arrayListA = mutableListOf(1,3,4,5)
+  val arrayListB: ArrayList<String> = arrayListOf()
+  val arrayListC = listOf<Boolean>(true, false, true)
+
+  // Editing Array values
+  arrayA[0] = 99
+
+  // Add values to array
+  arrayA += 100
+  arrayB += "First text"
+
+  // Edit ArrayList values
+  arrayListA[3] = 89
+
+  // Add values to arrayList
+  arrayListB.add("testing 2")
+
+  // Editing immutable arrayList
+//  arrayListC[0] = false
+
+  // Actions with arrays and arrayLists
+
+//  arrayA.forEach {
+//    println("Iterrating trough value $it")
+//  }
+
+  arrayListC.forEachIndexed { index, value ->
+    println("Currently we are at index $index and its values is $value")
+  }
+}
 
