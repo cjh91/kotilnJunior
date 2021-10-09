@@ -1,5 +1,5 @@
 fun main() {
-  whenCases()
+  println(functionWithArgsAndReturn(1997, 2021))
 }
 
 /***
@@ -153,3 +153,30 @@ fun whenCases() {
 
 }
 
+/**
+ * Defining simple function
+ */
+fun simpleFunction() {
+  println("This is a simple function!")
+}
+
+/**
+ * Defining function with arguments
+ */
+fun functionWithArgs(age: Int, name: String) {
+  println("Your name is $name and your $age is years old")
+}
+
+/**
+ * Function with return
+ */
+fun functionWithReturn (): String {
+  return "Potato"
+}
+
+/**
+ * Function with arguments and return
+ */
+fun functionWithArgsAndReturn(birthYear: Int, currentYear: Int = 2020): Int {
+  return currentYear - birthYear
+}
