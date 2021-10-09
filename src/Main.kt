@@ -1,5 +1,5 @@
 fun main() {
-  ifStatements()
+  whenCases()
 }
 
 /***
@@ -95,3 +95,61 @@ fun ifStatements() {
     println("Number $number is negotive")
   }
 }
+
+/**
+ * For Loops
+ */
+fun forLoops() {
+  val startYear = 2005
+  val endYear = 2010
+
+  var longYearCounter = 0
+  var shortYearCounter = 0
+
+  for(i in startYear..endYear) {
+    if (i % 4 == 0) {
+      longYearCounter += 1
+    } else {
+      shortYearCounter += 1
+    }
+  }
+
+  println("In given range there were $longYearCounter long years and $shortYearCounter short years")
+}
+
+/**
+ * While Loops
+ */
+fun whileLoops() {
+  var passRegMet = false
+
+  while (!passRegMet) {
+    print("Please enter password: ")
+    var userInput = readLine()
+
+    if (userInput!!.length < 8) {
+      println("Password has to be at least 8 chars long")
+    } else {
+      println("Password valid")
+      passRegMet = true
+    }
+  }
+
+
+}
+
+/**
+ * When cases
+ */
+fun whenCases() {
+  val answer = true
+  when(answer) {
+    true ->  println("Variable is true")
+    false -> {
+      println("Variable is false")
+      println("Bye!")
+    }
+  }
+
+}
+
