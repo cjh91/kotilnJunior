@@ -1,5 +1,5 @@
 fun main() {
-  arrays()
+  ifStatements()
 }
 
 /***
@@ -81,3 +81,17 @@ fun arrays() {
   }
 }
 
+/**
+ * If statements
+ */
+fun ifStatements() {
+  val number = -2
+
+  if (number % 2 == 0 && number > 0) {
+    println("Number $number is even and positive")
+  } else if (number % 2 != 0 && number > 0) {
+    println("Number $number is odd and positive")
+  } else {
+    println("Number $number is negotive")
+  }
+}
