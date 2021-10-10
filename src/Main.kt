@@ -1,5 +1,5 @@
 fun main() {
-  println(functionWithArgsAndReturn(1997, 2021))
+nullability()
 }
 
 /***
@@ -179,4 +179,36 @@ fun functionWithReturn (): String {
  */
 fun functionWithArgsAndReturn(birthYear: Int, currentYear: Int = 2020): Int {
   return currentYear - birthYear
+}
+
+/**
+ * Handling nullability
+ */
+fun nullability() {
+  var myVar:String? = "null"
+
+  // Safe call (?.)
+  // Use this if You don't mind that string "null" can be returned
+
+  //  val anotherVar = if (myVar != null) {
+//    myVar.length
+//  } else {
+//    -1
+//  }
+//  println("My string length is ${myVar?.length}")
+
+  // Safe call with let
+  // It excute let block ONLY IF myVar is NOT null
+//  myVar?.let {
+//    println("Our variable is NOT null, its $it")
+//  }
+
+  // Elvis operator (?:
+//  val anotherVar2 = myVar?.length ?: -1
+//  println(anotherVar2)
+
+
+  // Non-null assertation operator (!!)
+  println("Length of our variable is ${myVar!!.length}")
+
 }
