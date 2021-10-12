@@ -1,7 +1,9 @@
 fun main() {
-  val myNewCar = MyPrivateCar("Audi", 2005)
-  myNewCar.outPutCarAge()
-  println(myNewCar.myCarName)
+  val john = Employee(0, "Jhon", "Dohn", 3)
+
+  println("New employee added with ID: ${john.id}")
+  println("New employee has ${john.kids} kids")
+
 }
 
 /***
@@ -251,3 +253,8 @@ class MyPrivateCar(val myCarName: String, private val myCarYear: Int) {
     println("My car is ${2020 - myCarYear}")
   }
 }
+
+/**
+ * Data class
+ */
+data class Employee (val id: Int, val name: String, val surname: String, val kids: Int = 0)
