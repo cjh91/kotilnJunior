@@ -1,8 +1,7 @@
-fun main() {
-  val john = Employee(0, "Jhon", "Dohn", 3)
+import kotlin.math.pow
 
-  println("New employee added with ID: ${john.id}")
-  println("New employee has ${john.kids} kids")
+fun main() {
+  debugging()
 
 }
 
@@ -258,3 +257,22 @@ class MyPrivateCar(val myCarName: String, private val myCarYear: Int) {
  * Data class
  */
 data class Employee (val id: Int, val name: String, val surname: String, val kids: Int = 0)
+
+/**
+ * Debugging in IDE
+ */
+fun debugging() {
+  val a = 100.90
+  val b = 105.23
+
+  val c = a.pow(2)/b
+
+  val d = false
+  val e = !d
+
+  val f = "Kim"
+  val g = "My name is $f"
+
+  val h = arrayOf(1, 2, 3, 4, 5,6 )
+  val i = h[5]
+}
