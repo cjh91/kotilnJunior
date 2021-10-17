@@ -1,7 +1,7 @@
 import kotlin.math.pow
 
 fun main() {
-  debugging()
+  addition()
 
 }
 
@@ -27,7 +27,7 @@ fun vars() {
   println("Initial value of Boolean $thisIsBoolean")
 
   // Declaring variables that can Not change value, keyword - "val"
-  val  thisIsIntVal = 9
+  val thisIsIntVal = 9
 
   // Declaring variables as constants, keyword - "const val"
 //  const val MYCONST = "my Constant"
@@ -48,12 +48,12 @@ fun vars() {
 fun arrays() {
   // Array declaration
   // Arrays have fixed allocated memory
-  var arrayA = arrayOf(1,2,3,4,5,6,7,8,9)
+  var arrayA = arrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9)
   var arrayB: Array<String> = emptyArray()
 
   // Array list declaration
   // Array list have dynamic memory allocation
-  val arrayListA = mutableListOf(1,3,4,5)
+  val arrayListA = mutableListOf(1, 3, 4, 5)
   val arrayListB: ArrayList<String> = arrayListOf()
   val arrayListC = listOf<Boolean>(true, false, true)
 
@@ -109,7 +109,7 @@ fun forLoops() {
   var longYearCounter = 0
   var shortYearCounter = 0
 
-  for(i in startYear..endYear) {
+  for (i in startYear..endYear) {
     if (i % 4 == 0) {
       longYearCounter += 1
     } else {
@@ -146,8 +146,8 @@ fun whileLoops() {
  */
 fun whenCases() {
   val answer = true
-  when(answer) {
-    true ->  println("Variable is true")
+  when (answer) {
+    true -> println("Variable is true")
     false -> {
       println("Variable is false")
       println("Bye!")
@@ -173,7 +173,7 @@ fun functionWithArgs(age: Int, name: String) {
 /**
  * Function with return
  */
-fun functionWithReturn (): String {
+fun functionWithReturn(): String {
   return "Potato"
 }
 
@@ -188,7 +188,7 @@ fun functionWithArgsAndReturn(birthYear: Int, currentYear: Int = 2020): Int {
  * Handling nullability
  */
 fun nullability() {
-  var myVar:String? = "null"
+  var myVar: String? = "null"
 
   // Safe call (?.)
   // Use this if You don't mind that string "null" can be returned
@@ -256,7 +256,7 @@ class MyPrivateCar(val myCarName: String, private val myCarYear: Int) {
 /**
  * Data class
  */
-data class Employee (val id: Int, val name: String, val surname: String, val kids: Int = 0)
+data class Employee(val id: Int, val name: String, val surname: String, val kids: Int = 0)
 
 /**
  * Debugging in IDE
@@ -265,7 +265,7 @@ fun debugging() {
   val a = 100.90
   val b = 105.23
 
-  val c = a.pow(2)/b
+  val c = a.pow(2) / b
 
   val d = false
   val e = !d
@@ -273,6 +273,15 @@ fun debugging() {
   val f = "Kim"
   val g = "My name is $f"
 
-  val h = arrayOf(1, 2, 3, 4, 5,6 )
+  val h = arrayOf(1, 2, 3, 4, 5, 6)
   val i = h[5]
+}
+
+/**
+ * Takes argument [number1] & [number2]
+ * @return Sum of passed number
+ */
+fun addition(number1: Int, number2: Int): Int {
+  // return sum of number
+  return number1 + number2
 }
